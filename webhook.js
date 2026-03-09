@@ -13,7 +13,7 @@ export async function sendWebhook(data) {
         await axios.post(WEBHOOK_URL, data, {
             timeout: 5000,
             headers: {
-                'x-webhook-secret': 'ugandaisfake'
+                'x-webhook-secret': process.env.WEBHOOK_SECRET || 'ugandaisfake'
             }
         });
         console.log(`[Webhook Success] Heartbeat/Alert sent for ${data.token || 'system'}`);
