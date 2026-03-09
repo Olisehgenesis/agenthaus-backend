@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { TOKENS } from "./tokens.js";
 import { getPrice } from "./api.js";
 import { sendWebhook } from "./webhook.js";
